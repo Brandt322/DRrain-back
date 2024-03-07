@@ -1,4 +1,4 @@
-package com.drain.entity;
+package com.drain.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,12 +8,12 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "customer")
-public class Customer {
-    
+@Table(name = "order_product")
+public class Order_Product {
 }
