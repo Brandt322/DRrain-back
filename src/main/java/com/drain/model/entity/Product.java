@@ -1,4 +1,4 @@
-package com.drain.entity;
+package com.drain.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,6 +13,6 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "payment")
-public class Payment {
+@Table(name = "product")
+public class Product {
 }
