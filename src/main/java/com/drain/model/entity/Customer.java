@@ -20,35 +20,36 @@ public class Customer {
     @Column(name = "ID")
     private Long id;
 
-    @Column(name = "UserName")
+    @Column(name = "user_name")
     private String userName;
 
-    @Column(name = "LastName")
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "FirstName")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "Phone")
+    @Column(name = "phone")
     private String phone;
 
-    @Column(name = "Address1")
+    @Column(name = "address1")
     private String address1;
 
-    @Column(name = "Address2")
+    @Column(name = "address2")
     private String address2;
 
-    @Column(name = "Country")
+    @Column(name = "country")
     private String country;
 
-    @Column(name = "City")
+    @Column(name = "city")
     private String city;
 
-    @Column(name = "Province")
+    @Column(name = "province")
     private String province;
 
-    @Column(name = "PostalCode")
+    @Column(name = "postal_code")
     private int postalCode;
+
     @OneToMany(mappedBy = "customer")
     private List<Payment> payments;
 }
