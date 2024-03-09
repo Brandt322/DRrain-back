@@ -19,14 +19,14 @@ public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CheckNum")
+    @Column(name = "check_num")
     private String checkNum;
-    @Column(name = "PaymentDate")
+    @Column(name = "payment_date")
     private Date paymentDate ;
-    @Column(name = "Amount")
+    @Column(name = "amount")
     private double amount;
     @ManyToOne
-    @JoinColumn(name = "CustomerID")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
 
