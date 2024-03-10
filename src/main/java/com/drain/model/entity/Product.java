@@ -8,30 +8,36 @@ import lombok.Setter;
 import javax.persistence.*;
 
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name="product")
 public class Product {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "ID", nullable = false, unique = true)
-//    private Long id;
-//    @Column(name = "Name")
-//    private String name;
-//    @Column(name = "Height")
-//    private double height;
-//    @Column(name = "Width")
-//    private double width;
-//    @Column(name = "Color")
-//    private String color;
-//    @Column(name = "PdtDescription")
-//    private String pdtDescription;
-//    @Column(name = "QtyInStock")
-//    private int qtyInStock;
-//    @Column(name = "BuyPrice")
-//    private double buyPrice;
-//    @Column(name = "Discount")
-//    private double discount;
-//    @ManyToOne
-//    @JoinColumn(name = "BrandID", referencedColumnName = "ID", nullable = false)
-//    private Brand brand;
-//    @Column(name = "ProductType")
-//    private String productType;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, unique = true)
+    private Long id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "height")
+    private double height;
+    @Column(name = "width")
+    private double width;
+    @Column(name = "color")
+    private String color;
+    @Column(name = "pdt_description")
+    private String pdtDescription;
+    @Column(name = "qty_in_Stock")
+    private int qtyInStock;
+    @Column(name = "buy_price")
+    private double buyPrice;
+    @Column(name = "discount")
+    private double discount;
+    @ManyToOne
+    @JoinColumn(name = "brand_id", referencedColumnName = "id", nullable = false)
+    private Brand brand;
+    @Column(name = "product_type")
+    private String productType;
 }
