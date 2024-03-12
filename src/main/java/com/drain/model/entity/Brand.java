@@ -19,10 +19,10 @@ import java.util.List;
 public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, unique = true)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(name = "brand_name", nullable = false, unique = true)
+    @Column(name = "brand_name", nullable = false)
     private String brandName;
 
   @OneToMany(mappedBy = "brand")
