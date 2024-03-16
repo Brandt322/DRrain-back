@@ -1,14 +1,17 @@
 package com.drain.service;
 
 import com.drain.model.entity.Customer;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 public interface CustomerService {
     List<Customer> getAll();
+
+    Customer findById(Long id);
+
     Customer save(Customer customer);
-    Customer edit(Long id);
-    Customer delete(Long id);
 
+    Customer update(Long id, Customer customer);
 
+    boolean delete(Long id);
 }

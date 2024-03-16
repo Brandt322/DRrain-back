@@ -15,7 +15,6 @@ public class BrandController {
     public BrandController (BrandServiceImpl brandServiceImpl){
         this.brandServiceImpl = brandServiceImpl;
     }
-
     @GetMapping
     public ResponseEntity<Iterable<Brand>> brand(){
         Iterable<Brand> brandList = brandServiceImpl.getAll();
@@ -25,5 +24,5 @@ public class BrandController {
     public ResponseEntity<Brand> addBrand(@RequestBody Brand brand) {
         Brand savedBrand = brandServiceImpl.save(brand);
         return new ResponseEntity<>(savedBrand, HttpStatus.CREATED);
-    }
+    } 
 }
